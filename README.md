@@ -16,7 +16,7 @@
 		- Nodemailer
 
 
-## Command to run the services ##
+## Useful docker commands ##
 	- docker-compose up (run the services)
 	- docker-compose up -d (run the services in the background)
 	- docker ps (list the containers are running)
