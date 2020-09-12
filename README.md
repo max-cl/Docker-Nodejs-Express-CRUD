@@ -6,14 +6,14 @@
 	- Postgres
 
 ## Server components ##
-- CRUD
-- Sign-up and Sign-in (JWT + Passport)
-- Database:
-	- Postgres (Sequelize ORM)
-- Validation:
-	- Joi
-- Email:
-	- Nodemailer
+	- CRUD
+	- Sign-up and Sign-in (JWT + Passport)
+	- Database:
+		- Postgres (Sequelize ORM)
+	- Validation:
+		- Joi
+	- Email:
+		- Nodemailer
 
 
 ## Command to run the services ##
