@@ -1,0 +1,32 @@
+version: "3"
+services:
+  node_backend:
+    container_name: "node_backend"
+    build: ./node_backend/
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      RDS_DB_NAME: "db_test"
+      RDS_USERNAME: "postgres"
+      RDS_PASSWORD: "postgres"
+      RDS_HOSTNAME: "postgres"
+      RDS_PORT: 5432
+      JWT_SECRET: "super-secret-key"
+      EMAIL_ADDRESS: "email@email.comm"
+      EMAIL_PASSWORD: "email_password"
+      FORGOT_PASSWORD_LINK: "http://localhost:3000"
+    depends_on:
+      - pg
+  pg:
+    image: "postgres:12"
+    container_name: "postgres"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pg/db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: "db_test"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
