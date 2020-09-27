@@ -18,7 +18,11 @@ exports.getTodo = async (req, res, next) => {
             try {
 
                 const { id_user } = req.params;
-                const todo = await Todo.findAll();
+                const todo = await Todo.findAll({
+                    where: {
+                        id_user
+                    }
+                });
                 
                 if (todo.length > 0) {
                     const data = helper.Helper_1(todo);
