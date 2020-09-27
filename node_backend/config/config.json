@@ -1,0 +1,8 @@
+"local": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "db_test",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
