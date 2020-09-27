@@ -19,14 +19,14 @@ db.sequelize = sequelize;
  
 db.user = require('../model/user.model')(sequelize, Sequelize);
 db.role = require('../model/role.model')(sequelize, Sequelize);
-db.product = require('../model/product.model')(sequelize, Sequelize);
+db.todo = require('../model/todo.model')(sequelize, Sequelize);
 
 
 /** MANAGE USER AND ROLES */ 
 db.role.belongsToMany(db.user, { through: 'user_roles', foreignKey: 'id_role', otherKey: 'id_user'});
 db.user.belongsToMany(db.role, { through: 'user_roles', foreignKey: 'id_user', otherKey: 'id_role'});
 
-/** PRODUCT TABLE */
-db.product.belongsTo(db.user, { foreignKey: 'id_user' });
+/** TODO TABLE */
+db.todo.belongsTo(db.user, { foreignKey: 'id_user' });
 
 module.exports = db;

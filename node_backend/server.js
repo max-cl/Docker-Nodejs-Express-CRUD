@@ -18,7 +18,7 @@ dotenv.config();
 // });
 
  // force: true will drop the table if it already exists
- db.sequelize.sync({force: true}).then(() => {
+ /*db.sequelize.sync({force: true}).then(() => {
    console.log('Drop and Resync with { force: true }');
    initial();
  });
@@ -38,7 +38,7 @@ dotenv.config();
  		id: 3,
  		name: "ROLE_2"
  	});
- }
+}*/
 
 const PORT = process.env.PORT || 3001;
 
@@ -57,7 +57,7 @@ app.get('/', (req, res, next) => {
 });
 
 require('./routes/user.route')(app);
-require('./routes/product.route')(app);
+require('./routes/todo.route')(app);
 
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
