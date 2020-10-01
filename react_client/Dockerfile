@@ -17,11 +17,12 @@ RUN npm install
 ## to the app direcoty
 COPY . /usr/src/app
 
-EXPOSE 3001
+EXPOSE 3000
 
 ## We start our application by calling
-## nodemon server.js.
-CMD ["node","server.js"]
+## npm start.
+CMD ["npm","start"]
 
 # Boundle app source
 VOLUME /usr/src/app
+VOLUME /usr/src/app/node_modules

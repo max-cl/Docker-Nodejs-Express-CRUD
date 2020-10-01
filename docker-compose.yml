@@ -1,5 +1,14 @@
 version: "3"
 services:
+  react_client:
+    container_name: "react_client"  
+    build: ./react_client/
+    stdin_open: true
+    ports:
+      - 3000:3000
+    depends_on:
+      - node_backend
+
   node_backend:
     container_name: "node_backend"
     build: ./node_backend/

@@ -1,9 +1,15 @@
-# Docker-Nodejs-Express-CRUD
+# Docker-React-Nodejs-Express-CRUD
 
 ## Components ##
 	- Docker
+	- React
 	- Nodejs (Express Framework)
 	- Postgres
+
+## Front-end components ##
+	- React
+	- Redux
+	- Material UI
 
 ## Server components ##
 	- CRUD
