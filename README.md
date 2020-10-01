@@ -1,4 +1,4 @@
-# Docker-React-Node-Express (CRUD)
+# Docker-React-Node-Express-Postgres (CRUD)
 
 ## Components ##
 	- Docker
