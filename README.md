@@ -1,4 +1,4 @@
-# Docker-React-Nodejs-Express-CRUD
+# Docker-React-Node-Express (CRUD)
 
 ## Components ##
 	- Docker
